@@ -1,0 +1,18 @@
+html,body{height: 100%;}
+
+div.page>header{grid-area:head;}
+div.page>section{grid-area:cont;}
+div.page>footer{grid-area:foot;}
+
+div.page{
+	width: 100%;
+	margin:0 auto;
+	display: grid;
+	grid-template-areas: 
+		'head'
+		'cont'
+		'foot'
+	;
+	grid-template-rows: 0px auto 100px;
+	grid-template-columns: auto;
+}
