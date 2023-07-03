@@ -142,7 +142,7 @@ header.sticky .navlist a::after {
     min-height: 100vh;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 2fr);
     align-items: center;
     gap: 2rem;
 }
@@ -235,10 +235,83 @@ section{
 }
 
 @media (max-width: 1460px) {
+    section{
+        padding: 0 12%;
+        transition: .2s;
+    }
+}
 
+@media (max-width: 1340px){
+    .slide img{
+        width: 100%;
+        height: auto;
+    }
+    .content-1 h1{
+        font-size: 45px;
+        margin: 0 0 30px;
+    }
+    .content-1 h5{
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 1195px){
+    
+    section {
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .fa-text-content{
+        padding: 115px;
+        padding-bottom: 20px;
+    }
+    .slideshow-container{
+        text-align: center;
+    }
+    .slide img {
+        width: 560px;
+        height: auto;
+    }
+    .content-1 {
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1197px) {
+    #menu-icon {
+        display: block;
+    }
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 40vh;
+        background: #c49d63;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+    }
+    .navlist a{
+        margin-left: 0;
+        display: block;
+        margin: 7px 0;
+    }
+    .navlist.open{
+
+    }
+}
+
+@media (max-width: 990px){
+    
 }
   
 
 footer{
     background: black;
+    width: auto;
 }
