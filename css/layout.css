@@ -5,7 +5,7 @@ div.page>section{grid-area:cont;}
 div.page>footer{grid-area:foot;}
 
 div.page{
-	width: 100%;
+	width: 90%;
 	margin:0 auto;
 	display: grid;
 	grid-template-areas: 

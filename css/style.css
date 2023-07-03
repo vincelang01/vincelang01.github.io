@@ -13,6 +13,10 @@ body {
     width: 100%;
     top: 0;
     left: 0;
+    background-image: url(background.jpg)
+}
+
+.page{    
     background: linear-gradient(90deg, #eec17d 21%, #ca9d59 55.52%, #eec17d 81%);
     background-repeat: repeat;
     background-position: 0 0;
@@ -49,12 +53,6 @@ body {
       background-position: 0% 0%;
     }
 } */
-
-@media (max-width: 768px) {
-    body {
-        background-size: 200% 200%;
-    }
-}
   
   
 /* background: linear-gradient(245.59deg, #f1d1a2 0%, #c49d63 28.53%, #a78046 75.52%); */
@@ -148,7 +146,7 @@ header.sticky .navlist a::after {
 }
 
 section{
-    padding: 0 19%;
+    padding: 0 12%;
 }
 
 .fa-text-content h5 {
