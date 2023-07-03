@@ -9,6 +9,30 @@
 }
 
 body {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #eec17d 21%, #ca9d59 55.52%, #eec17d 81%);
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+    animation: animatedBackground 50s linear infinite;
+}
+
+/* background: linear-gradient(90deg, #f1d1a2 21%, #be9352 55.52%, #f1d1a2 81%); */
+
+@keyframes animatedBackground {
+    from {
+      background-position: 0 0;
+    }
+    /*use negative width if you want it to flow right to left else and positive for left to right*/
+    to {
+      background-position: -10000px 0;
+    }
+}
+
+/* body {
     background: linear-gradient(245.59deg, #f1d1a2 0%, #be9352 75.52%);
     height: 100vh;
     background-size: 100% 200%;
@@ -24,7 +48,7 @@ body {
     100% {
       background-position: 0% 0%;
     }
-}
+} */
 
 @media (max-width: 768px) {
     body {
@@ -106,6 +130,10 @@ header.sticky{
 
 header.sticky ul li a, header.sticky .logo, header.sticky #menu-icon{
     color: #6e6e6e;
+}
+
+header.sticky .navlist a::after {
+    background-color: #6e6e6e;
 }
 
 .content-1{
