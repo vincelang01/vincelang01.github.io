@@ -69,6 +69,7 @@ header{
     padding: 15px 9%;
     background: transparent;
     transition: 0.4s;
+    background-color: #eec17d;
 }
 
 header.sticky{
@@ -287,12 +288,12 @@ section{
         top: 100%;
         right: -100%; /*Nav list not visible*/
         width: 300px;
-        height: 40vh;
-        background: #c49d63;
+        height: 30vh;
+        background: #eec17d;
         display: flex;
         align-items: center;
         flex-direction: column;
-        padding: 50px 20px;
+        padding: 20px 20px;
         transition: all .55s ease;
     }
     .navlist a{
