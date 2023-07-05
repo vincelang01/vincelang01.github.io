@@ -135,18 +135,14 @@ header.sticky .navlist a::after {
     background-color: #6e6e6e;
 }
 
-.fatelep{
-
-}
-
 .content-1{
-    height: 100%;
+    height: 50%;
     width: 100%;
-    margin-top: 50px;
-    min-height: 100vh;
+    margin-top: 80px;
+    min-height: 50vh;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 2fr);
     align-items: center;
     gap: 2rem;
 }
@@ -154,10 +150,10 @@ header.sticky .navlist a::after {
 .content-2{
     height: 50%;
     width: 100%;    
-    /* min-height: 100vh; */
+    min-height: 50vh;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 2fr);
     align-items: center;
     gap: 2rem;
 }
@@ -182,30 +178,117 @@ section{
     margin: 0 0 45px;
 }
 
-.slideshow-container {
-    position: relative;
-    width: 600px; /* Állítsd a megfelelő szélességre */
-    height: 400px; /* Állítsd a megfelelő magasságra */
-    overflow: hidden;
-    margin-left: 40px;
+/*-----------------------------------------------------------------------*/
+
+.content-1 .slideshow-container {
+  position: relative;
+  width: 600px; /* Állítsd a megfelelő szélességre */
+  height: 400px; /* Állítsd a megfelelő magasságra */
+  overflow: hidden;
+  margin-left: 40px;
 }
 
-.slideshow-container-2 {
+.content-2 .slideshow-container-2{
     position: relative;
     width: 600px; /* Állítsd a megfelelő szélességre */
     height: 400px; /* Állítsd a megfelelő magasságra */
     overflow: hidden;
-    margin-left: 40px;
+    margin-right: 40px;
 }
+
+.content-1 .slide,
+.content-2 .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Áttűnési idő és görbék beállítása */
+}
+
+.content-1 .slide img,
+.content-2 .slide img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.content-1 .slide.active,
+.content-2 .slide.active {
+  opacity: 1;
+}
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.content-1 .slide.active ~ .slide,
+.content-2 .slide.active ~ .slide {
+  animation: slideAnimation 3s infinite;
+}
+
+.content-1 .prev,
+.content-1 .next,
+.content-2 .prev,
+.content-2 .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 8px 16px;
+}
+
+.content-1 .prev {
+  left: 16px;
+}
+
+.content-1 .next {
+  right: 16px;
+}
+
+.content-2 .prev {
+  left: 16px;
+}
+
+.content-2 .next {
+  right: 16px;
+}
+
+
+/*----------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* 
+.slideshow-container {
+    position: relative;
+    width: 600px; /* Állítsd a megfelelő szélességre *//*
+    height: 400px; /* Állítsd a megfelelő magasságra *//*
+    overflow: hidden;
+    margin-left: 40px;
+} */
   
-.slide {
+/* .slide {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 1s ease-in-out; /* Áttűnési idő és görbék beállítása */
+    transition: opacity 1s ease-in-out; /* Áttűnési idő és görbék beállítása *//*
 }
 
 .slide img {
@@ -250,7 +333,7 @@ section{
 
 .next {
     right: 16px;
-}
+} */
 
 @media (max-width: 1535px) {
     header{
