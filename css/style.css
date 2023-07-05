@@ -13,7 +13,7 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    background-image: url(background.jpg)
+    background-image: url(../images/background.jpg)
 }
 
 .page{    
@@ -110,13 +110,13 @@ header.sticky{
     bottom: 0;
     left: 0;
     background-color: white;
-    transform-origin: bottom right;
+    transform-origin: right right;
     transition: transform 0.25s ease-out;
 }
 
 .navlist a:hover::after{
     transform: scaleX(1);
-    transform-origin: bottom left;
+    transform-origin: left left;
 }
 
 #menu-icon{
@@ -135,19 +135,36 @@ header.sticky .navlist a::after {
     background-color: #6e6e6e;
 }
 
+.fatelep{
+
+}
+
 .content-1{
     height: 100%;
     width: 100%;
+    margin-top: 50px;
     min-height: 100vh;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.content-2{
+    height: 50%;
+    width: 100%;    
+    /* min-height: 100vh; */
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2rem;
 }
 
 section{
     padding: 0 12%;
+    height: auto;
 }
 
 .fa-text-content h5 {
@@ -170,6 +187,15 @@ section{
     width: 600px; /* Állítsd a megfelelő szélességre */
     height: 400px; /* Állítsd a megfelelő magasságra */
     overflow: hidden;
+    margin-left: 40px;
+}
+
+.slideshow-container-2 {
+    position: relative;
+    width: 600px; /* Állítsd a megfelelő szélességre */
+    height: 400px; /* Állítsd a megfelelő magasságra */
+    overflow: hidden;
+    margin-left: 40px;
 }
   
 .slide {
@@ -240,6 +266,24 @@ section{
     }
 }
 
+@media (max-width: 1368px){
+    .content-1 {
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .fa-text-content{
+        padding: 115px;
+        padding-bottom: 20px;
+    }
+    .slideshow-container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media (max-width: 1340px){
     .slide img{
         width: 100%;
@@ -262,38 +306,39 @@ section{
         padding: 0 3%;
         transition: .2s;
     }
-    .fa-text-content{
-        padding: 115px;
-        padding-bottom: 20px;
-    }
+    
     .slideshow-container{
         padding-left: 400px;
-        text-align: center;
+        
         
     }
     .slide img {
         width: 100%;
         height: auto;
-        margin-left: auto;
-        margin-right: auto;
+        
     }
     .content-1 {
         height: 100%;
         gap: 1rem;
         grid-template-columns: 1fr;
+        
     }
     .navlist {
         position: absolute;
         top: 100%;
         right: -100%; /*Nav list not visible*/
         width: 300px;
-        height: 30vh;
-        background: #eec17d;
+        height: 32vh;
+        background: #eeb55f;
         display: flex;
         align-items: center;
         flex-direction: column;
-        padding: 20px 20px;
+        padding: 10px 10px;
         transition: all .55s ease;
+        border-left: 2px #f1b04d solid;
+        border-bottom: 2px #f1b04d solid;
+        border-top: 2px #f1b04d solid;
+        border-radius: 0 0 0 20px;
     }
     .navlist a{
         margin-left: 0;
@@ -305,10 +350,17 @@ section{
     }
     header.sticky .navlist{
         background: rgb(218, 210, 210);
+        border-left: 2px #c4c2c2 solid;        
+        border-bottom: 2px #c4c2c2 solid;
+        border-top: 2px #c4c2c2 solid;
     }
 }
 
 @media (max-width: 800px){
+    .slideshow-container{
+        width: 80%;
+        height: 100%;
+    }
     .slide img{
         width: 100%;
         height: auto;
@@ -318,5 +370,10 @@ section{
 
 footer{
     background: black;
-    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    height: 80px;
+    color: white;
 }
