@@ -4,13 +4,7 @@ div.page>header{grid-area:head;}
 div.page>section{grid-area:cont;}
 div.page>footer{grid-area:foot;}
 
-div.page {
-	width: 85%;
-	margin: 0 auto;
-	display: flex;
-}
-
-/* div.page{
+div.page{
 	width: 85%;
 	margin:0 auto;
 	display: grid;
@@ -21,4 +15,4 @@ div.page {
 	;
 	grid-template-rows: 0px auto 100px;
 	grid-template-columns: auto;
-} */
+}
