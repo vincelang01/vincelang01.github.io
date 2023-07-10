@@ -1,0 +1,200 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    /* border: 1px red solid; */
+    list-style: none;
+    text-decoration: none;
+}
+
+html,body{height: 100%;}
+
+div.page>header{grid-area:head;}
+div.page>section{grid-area:cont;}
+div.page>footer{grid-area:foot;}
+
+div.page{
+	width: 85%;
+	margin:0 auto;
+	display: grid;
+	grid-template-areas: 
+		'head'
+		'cont'
+		'foot'
+	;
+	grid-template-rows: 0px auto 100px;
+	grid-template-columns: auto;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(../images/background.jpg)
+}
+
+.page{    
+    background: linear-gradient(90deg, #eec17d 21%, #ddaf69 55.52%, #eec17d 81%);
+    /* background: linear-gradient(90deg, #eec17d 21%, #ca9d59 55.52%, #eec17d 81%); */
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: 85% 100%;
+    animation: animatedBackground 50s linear infinite;
+}
+
+@keyframes animatedBackground {
+    from {
+      background-position: 0 0;
+    }
+    /*use negative width if you want it to flow right to left else and positive for left to right*/
+    to {
+      background-position: -10000px 0;
+    }
+}
+
+header{
+    position: fixed;
+    right: 0;
+    z-index: 10000;
+    top: 0;    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 9%;
+    background: transparent;
+    transition: 0.4s;
+    background-color: #eec17d;
+}
+
+header.sticky{
+    padding: 15px 9%;
+    background-color: rgb(218, 210, 210);
+    /* transition: white 200ms linear; */
+}
+
+.logo{
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+.navlist{
+    display: flex;
+    transition: 0.6s;
+}
+
+.navlist a {
+    color: white;
+    display: inline-block;
+    position: relative;
+    margin-left: 80px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.navlist a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: right right;
+    transition: transform 0.25s ease-out;
+}
+
+.navlist a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left left;
+}
+
+#menu-icon{
+    color: white;
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+header.sticky ul li a, header.sticky .logo, header.sticky #menu-icon{
+    color: #6e6e6e;
+}
+
+header.sticky .navlist a::after {
+    background-color: #6e6e6e;
+}
+
+section{
+    padding: 0 12%;
+    height: auto;
+}
+
+footer{
+    background: black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    height: 80px;
+    color: white;
+}
+
+@media (max-width: 1535px) {
+    header{
+        padding: 11px 3%;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 1260px) {
+    .navlist a {
+        margin-left: 70px;
+    }
+}
+
+@media (max-width: 1197px) {
+    div.page {
+        background: linear-gradient(90deg, #eec17d 21%, #ebba71 55.52%, #eec17d 81%);
+    }
+    #menu-icon {
+        display: block;
+    }
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: -100%; /*Nav list not visible*/
+        width: 200px;
+        height: 100vh;
+        background: #eeb55f;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px 10px;
+        transition: all .55s ease;
+        border-left: 2px #f1b04d solid;
+        border-bottom: 2px #f1b04d solid;
+        border-top: 2px #f1b04d solid;
+    }
+    .navlist a{
+        margin-left: 0;
+        display: block;
+        margin: 7px 0;
+    }
+    .navlist.open{
+        right: 0;
+    }
+    header.sticky .navlist{
+        background: rgb(218, 210, 210);
+        border-left: 2px #c4c2c2 solid;        
+        border-bottom: 2px #c4c2c2 solid;
+        border-top: 2px #c4c2c2 solid;
+    }
+}

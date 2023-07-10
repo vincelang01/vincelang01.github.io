@@ -1,14 +1,14 @@
-*{
+/*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans', sans-serif;
     /* border: 1px red solid; */
-    list-style: none;
+    /* list-style: none;
     text-decoration: none;
-}
+} */
 
-html,body{height: 100%;}
+/* html,body{height: 100%;}
 
 div.page>header{grid-area:head;}
 div.page>section{grid-area:cont;}
@@ -23,7 +23,7 @@ div.page{
 		'cont'
 		'foot'
 	;
-	grid-template-rows: 0px auto 100px;
+	grid-template-rows: auto auto 100px;
 	grid-template-columns: auto;
 }
 
@@ -37,7 +37,7 @@ body {
 
 .page{    
     background: linear-gradient(90deg, #eec17d 21%, #ddaf69 55.52%, #eec17d 81%);
-    /* background: linear-gradient(90deg, #eec17d 21%, #ca9d59 55.52%, #eec17d 81%); */
+    /* background: linear-gradient(90deg, #eec17d 21%, #ca9d59 55.52%, #eec17d 81%); */             /*
     background-repeat: repeat;
     background-position: 0 0;
     background-size: 85% 100%;
@@ -48,7 +48,7 @@ body {
     from {
       background-position: 0 0;
     }
-    /*use negative width if you want it to flow right to left else and positive for left to right*/
+    /*use negative width if you want it to flow right to left else and positive for left to right*/         /*
     to {
       background-position: -10000px 0;
     }
@@ -72,7 +72,7 @@ header{
 header.sticky{
     padding: 15px 9%;
     background-color: rgb(218, 210, 210);
-    /* transition: white 200ms linear; */
+    /* transition: white 200ms linear; */ /*
 }
 
 .logo{
@@ -135,7 +135,7 @@ header.sticky .navlist a::after {
 section{
     padding: 0 12%;
     height: auto;
-}
+} */
 
 .content-1{
     height: 50%;
@@ -184,16 +184,16 @@ section{
 
 .content-1 .slideshow-container {
   position: relative;
-  width: 600px; /* Állítsd a megfelelő szélességre */
-  height: 400px; /* Állítsd a megfelelő magasságra */
+  width: 600px;
+  height: 400px;
   overflow: hidden;
   margin-left: 40px;
 }
 
 .content-2 .slideshow-container-2{
     position: relative;
-    width: 600px; /* Állítsd a megfelelő szélességre */
-    height: 400px; /* Állítsd a megfelelő magasságra */
+    width: 600px;
+    height: 400px;
     overflow: hidden;
     margin-right: 40px;
 }

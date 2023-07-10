@@ -56,15 +56,6 @@ document.addEventListener("DOMContentLoaded", function() {
   startSlideshow(slideshow2);
 });
 
-
-let menu = document.querySelector("#menu-icon");
-let navlist = document.querySelector(".navlist");
-
-menu.onclick = () => {
-  menu.classList.toggle('bx-x');
-  navlist.classList.toggle('open');
-}
-
 const sr = ScrollReveal ({
   distance: '65px',
   duration: 2600,
@@ -82,7 +73,6 @@ window.addEventListener("resize", function() {
     this.location.reload(); 
   }
 })
-
 
 // window.alert(window.innerWidth);
 // window.alert(window.innerHeight);
