@@ -1,44 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//     var slides = document.querySelectorAll(".slide");
-//     var currentSlide = 0;
-//     var prev = document.querySelector(".prev");
-//     var next = document.querySelector(".next");
-//     var interval;
-  
-//     function showSlide(n) {
-//       clearInterval(interval);
-//       slides[currentSlide].classList.remove("active");
-//       currentSlide = (n + slides.length) % slides.length;
-//       slides[currentSlide].classList.add("active");
-//       startSlideshow();
-//     }
-  
-//     function startSlideshow() {
-//       interval = setInterval(function() {
-//         // Hozzáadunk egy tranzíciót a kép váltáshoz
-//         slides[currentSlide].classList.add("transition");
-//         setTimeout(function() {
-//           slides[currentSlide].classList.remove("transition");
-//         }, 1000); // Az animáció ideje
-  
-//         showSlide(currentSlide + 1);
-//       }, 7000);
-//     }
-  
-//     prev.addEventListener("click", function(e) {
-//       e.preventDefault();
-//       showSlide(currentSlide - 1);
-//     });
-  
-//     next.addEventListener("click", function(e) {
-//       e.preventDefault();
-//       showSlide(currentSlide + 1);
-//     });
-  
-//     slides[currentSlide].classList.add("active"); // Az első kép aktiválása
-//     startSlideshow();
-//   });
-
 document.addEventListener("DOMContentLoaded", function() {
   var slideshow1 = {
     slides: document.querySelectorAll(".content-1 .slide"),
@@ -113,5 +72,17 @@ const sr = ScrollReveal ({
   reset: true
 });
 
-sr.reveal('.fa-text-content', {delay: 200, origin: 'top'});
-sr.reveal('.slideshow-container', {delay: 450, origin: 'top'});
+window.addEventListener("resize", function() {
+  var screenWith = this.window.innerWidth;
+  if(screenWith > 1000) {
+    sr.reveal('.fa-text-content', {delay: 200, origin: 'top'});
+    sr.reveal('.slideshow-container', {delay: 450, origin: 'top'});
+  }
+  if(screenWith > 600) {
+    this.location.reload(); 
+  }
+})
+
+
+// window.alert(window.innerWidth);
+// window.alert(window.innerHeight);
