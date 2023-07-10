@@ -311,9 +311,9 @@ footer{
    
 
 @media (max-width: 1368px){
-    * {
-        /* border: 1px red solid; */
-    }
+    /* * {
+        border: 1px red solid;
+    } */
     section {
         height: 100%;
     }
