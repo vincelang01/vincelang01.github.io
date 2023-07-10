@@ -23,7 +23,7 @@ div.page{
 		'cont'
 		'foot'
 	;
-	grid-template-rows: 0px auto 100px;
+	grid-template-rows: 78px auto 100px;
 	grid-template-columns: auto;
 }
 
@@ -139,7 +139,7 @@ section{
 
 footer{
     background: black;
-    text-align: center;
+    /* text-align: center; */
     margin-left: auto;
     margin-right: auto;
     width: 85%;
