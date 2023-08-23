@@ -68,12 +68,12 @@ document.addEventListener("DOMContentLoaded", function() {
   startSlideshow(slideshow2);
 });
 
-const sr = ScrollReveal ({
-  distance: '65px',
-  duration: 2600,
-  delay: 450,
-  reset: true
-});
+// const sr = ScrollReveal ({
+//   distance: '65px',
+//   duration: 2600,
+//   delay: 450,
+//   reset: true
+// });
 
 window.addEventListener("resize", function() {
   var screenWith = this.window.innerWidth;
