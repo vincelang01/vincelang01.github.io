@@ -1,3 +1,15 @@
+const mainmodal = document.querySelector(".main-modal");
+const modalCloseBtn = document.querySelector(".modal .btns .clsButton");
+const body = document.querySelector("body");
+
+modalCloseBtn.addEventListener("click", () => {
+  mainmodal.style.opacity = "0";
+  setTimeout(() => {
+    mainmodal.classList.remove("active");
+    body.style.overflow = "visible";
+  })
+}, 3000)
+
 document.addEventListener("DOMContentLoaded", function() {
   var slideshow1 = {
     slides: document.querySelectorAll(".content-1 .slide"),
@@ -73,6 +85,3 @@ window.addEventListener("resize", function() {
     this.location.reload(); 
   }
 })
-
-// window.alert(window.innerWidth);
-// window.alert(window.innerHeight);

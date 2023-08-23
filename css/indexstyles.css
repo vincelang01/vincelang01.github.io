@@ -1,3 +1,128 @@
+.main-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.main-modal.active {
+    visibility: visible;
+}
+
+.main-modal .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.main-modal .modal {
+    height: 450px;
+    max-width: 450px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    gap: 10px;
+}
+
+.main-modal .modal .cancel-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    color: #eec17d;
+}
+
+.main-modal .icon {
+    height: 110px;
+    width: 110px;
+    background-color: #eec17d;
+    line-height: 110px;
+    border-radius: 50%;
+    font-size: 55px;
+    color: #fff;
+}
+
+.main-modal .modal-content {
+    margin: 10px 0;
+}
+
+.main-modal .modal-content .content-header {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.main-modal .modal-content p {
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: -3px;
+}
+
+.main-modal .modal form {
+    width: 98%;
+}
+
+.main-modal .modal form .field {
+    height: 45px;
+    width: 95%;
+    margin-bottom: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-modal .modal form .field input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0 15px;
+    outline: none;
+    font-size: 17px;
+    transition: all .3s ease;
+}
+
+.main-modal .modal form .field input:focus {
+    border-color: #edb562;
+}
+
+.main-modal .modal form .button {
+    height: 47px;
+}
+
+.main-modal .modal form .button input {
+    background-color: #eec17d;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 500;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.main-modal .modal form .text {
+    margin-top: 5px;
+
+}
+
+.header-container {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .content-1, .content-2{
     height: 50%;
     width: 100%;

@@ -8,24 +8,25 @@
     <link rel="stylesheet" type="text/css" href="css/indexstyles.css">
     <!-- box icon -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
     
     <title>Kezdőlap</title>
 </head>
-<body>
+<body style="overflow: hidden;">
     <div class="page">
         <header>
             <a href="#" class="logo">Zoldit Kft.</a>
             <ul class="navlist">
-                <li><a href="#">Kezdőlap</a></li>
-                <li><a href="#">Rólunk</a></li>
+                <li><a href="">Kezdőlap</a></li>
+                <li><a href="aboutus.html">Rólunk</a></li>
                 <li><a href="contact.html">Kapcsolat</a></li>
                 <li><a href="#">Terméklista</a></li>
                 <li><a href="ZOLDIT Kft. termelési kapacitás bővítési beruházása.html" target="_blank">Pályázatok</a></li>
             </ul>
             <div class="bx bx-menu" id="menu-icon"></div>
         </header>
+        
         <section>
             <div class="content-1">
                 <div class="fa-text-content">
@@ -52,16 +53,16 @@
                     <a class="next" href="#">&#10095;</a>
                 </div>
             </div>
-              <div class="content-2">
+            <div class="content-2">
                 <div class="slideshow-container-2">
-                  <div class="slide">
+                    <div class="slide">
                     <img src="images/bark1.jpg" alt="Kép 1">
-                  </div>
-                  <div class="slide">
+                    </div>
+                    <div class="slide">
                     <img src="images/bark2.jpg" alt="Kép 2">
-                  </div>
-                  <a class="prev" href="#">&#10094;</a>
-                  <a class="next" href="#">&#10095;</a>
+                    </div>
+                    <a class="prev" href="#">&#10094;</a>
+                    <a class="next" href="#">&#10095;</a>
                 </div>
                 <div class="fa-text-content">
                     <h5>Nagykanizsa <br>legnagyobb fakereskedése</h5>
@@ -78,6 +79,34 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, explicabo.</p>
         </div>
     </footer>
+    <div class="main-modal active">
+        <div class="overlay">
+        </div>
+        <div class="modal">
+            <label for="#" class="cancel-btn"><i class="fas fa-times"></i></label>
+            <div class="icon">
+                <i class="far fa-envelope"></i>         
+            </div>
+            <div class="modal-content">
+                <div class="content-header">Legyen Ön is feliratkozó!</div>
+                <p>Iratkozzon fel a legfrissebb hírekért és akciókért!</p>
+            </div>
+            <form action="#">
+                <div class="field">
+                    <input type="text" placeholder="Email cím" required>
+                </div>
+                <div class="field button">
+                    <input type="submit" value="Feliratkozás">
+                </div>
+                <div class="text">Email címét nem tesszük nyilvánossá!</div>
+            </form>
+            
+
+            <div class="btns">
+                <button type="button" class="clsButton">Bezár</button>
+            </div>  
+        </div>
+    </div>
 
     <!-- scrollreveal effect js -->
     <script src="https://unpkg.com/scrollreveal"></script>
