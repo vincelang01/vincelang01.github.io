@@ -1,12 +1,15 @@
 const mainmodal = document.querySelector(".main-modal");
 const modalCloseBtn = document.querySelector(".modal .btns .clsButton");
-const body = document.querySelector("body");
+const overlay = document.querySelector(".main-modal .overlay");
+
+const fullHeight = document.querySelector("header").offsetHeight + document.querySelector("section").offsetHeight + document.querySelector("footer").offsetHeight;
+overlay.style.height = fullHeight + "px";
 
 modalCloseBtn.addEventListener("click", () => {
   mainmodal.style.opacity = "0";
   setTimeout(() => {
     mainmodal.classList.remove("active");
-    document.querySelector(".main-modal .overlay").style.display = "none";
+    overlay.style.display = "none";
     // document.querySelector(".main-modal .overlay").classList.add("not-active");
     document.querySelector(".modal").style.display = "none";
   },500)

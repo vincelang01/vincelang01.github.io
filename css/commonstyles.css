@@ -16,7 +16,7 @@ div.page>footer{grid-area:foot;}
 
 div.page{
 	width: 85%;
-    height: auto;
+    
 	margin:0 auto;
 	display: grid;
 	grid-template-areas: 
