@@ -16,6 +16,7 @@ div.page>footer{grid-area:foot;}
 
 div.page{
 	width: 85%;
+    height: auto;
 	margin:0 auto;
 	display: grid;
 	grid-template-areas: 
@@ -23,7 +24,7 @@ div.page{
 		'cont'
 		'foot'
 	;
-	grid-template-rows: 78px auto 100px;
+	grid-template-rows: 78px auto 0;
 	grid-template-columns: auto;
 }
 
@@ -133,8 +134,9 @@ header.sticky .navlist a::after {
 }
 
 section{
-    padding: 0 12%;
+    padding: 0 8%;
     height: auto;
+    
 }
 
 footer{
@@ -142,7 +144,7 @@ footer{
     /* text-align: center; */
     margin-left: auto;
     margin-right: auto;
-    width: 85%;
+    width: 100%;
     height: 80px;
     color: white;
 }

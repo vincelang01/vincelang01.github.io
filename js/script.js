@@ -6,9 +6,11 @@ modalCloseBtn.addEventListener("click", () => {
   mainmodal.style.opacity = "0";
   setTimeout(() => {
     mainmodal.classList.remove("active");
-    body.style.overflow = "visible";
-  })
-}, 3000)
+    document.querySelector(".main-modal .overlay").style.display = "none";
+    // document.querySelector(".main-modal .overlay").classList.add("not-active");
+    document.querySelector(".modal").style.display = "none";
+  },500)
+})
 
 document.addEventListener("DOMContentLoaded", function() {
   var slideshow1 = {
@@ -68,20 +70,5 @@ document.addEventListener("DOMContentLoaded", function() {
   startSlideshow(slideshow2);
 });
 
-// const sr = ScrollReveal ({
-//   distance: '65px',
-//   duration: 2600,
-//   delay: 450,
-//   reset: true
-// });
-
-window.addEventListener("resize", function() {
-  var screenWith = this.window.innerWidth;
-  if(screenWith > 1000) {
-    sr.reveal('.fa-text-content', {delay: 200, origin: 'top'});
-    sr.reveal('.slideshow-container', {delay: 450, origin: 'top'});
-  }
-  if(screenWith > 600) {
-    this.location.reload(); 
-  }
-})
+// window.alert(screen.width);
+// window.alert(screen.height);
